@@ -1,0 +1,25 @@
+{
+  "name": "cse341-rebollo23",
+  "version": "1.0.0",
+  "description": "code for assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drebollo16/CSE341-Rebollo23.git"
+  },
+  "author": "Denise Rebollo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drebollo16/CSE341-Rebollo23/issues"
+  },
+  "homepage": "https://github.com/drebollo16/CSE341-Rebollo23#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
