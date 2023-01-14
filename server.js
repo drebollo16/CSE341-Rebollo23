@@ -5,7 +5,7 @@ const app = express();
 
 connectDB();
 app.use(express.json({ extended: false }));
-app.use('/API/userModel', require('./API/User'));
+//app.use('/API/userModel', require('./API/User'));
 
 
 
