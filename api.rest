@@ -1,7 +1,14 @@
 ###
 GET http://localhost:3000/contacts
+
+###
+GET http://localhost:3000/contacts/63c1ef67cd316c26b6bcef0e
+
  
 ###
 GET https://cserebollo.onrender.com/contacts
+
+### 
+GET https://cserebollo.onrender.com/contacts/63c1eb80cd316c26b6bcef0d
 
  
