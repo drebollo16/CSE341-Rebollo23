@@ -2,4 +2,4 @@
 GET http://localhost:3000/contacts
  
 ###
-GET https://cserebollo.onrender.com/localhost:3000/contacts
+GET https://cserebollo.onrender.com/contacts
