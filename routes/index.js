@@ -6,6 +6,6 @@ routes.get('/', (req, res) => {
 routes.get('/contacts', contactController.getAllContacts);
 
 //added to get contacts by ID
-routes.get('/', contactController.getOneId);
+routes.get('/:id', contactController.getOneId);
 
 module.exports = routes;

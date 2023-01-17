@@ -11,7 +11,7 @@ const user = new mongoose.Schema({
 
 
 const userId = new mongoose.Schema({
-    id: {
+    _id: {
         type: mongoose.Types.ObjectId
     }
 });
