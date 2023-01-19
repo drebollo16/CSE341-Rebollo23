@@ -1,21 +1,26 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const user = new mongoose.Schema({
+const user = new Schema({
     firstName: {
-        type: String
+        type: String,
+        required: true
     },
     lastName: {
-        type: String
+        type: String,
+        required: true
     }
 });
 
-
+/*
 const userId = new mongoose.Schema({
-    _id: {
-        type: mongoose.Types.ObjectId
+    id: {
+        type: mongoose.Schema.Types.ObjectId
     }
 });
-module.exports = User = mongoose.model('user', user);
+
+*/
+module.exports = User = mongoose.model('User', user);
 
 
-//module.exports = userId = mongoose.model('userId', userId);
+//module.exports = userId = mongoose.model('UserId', userId);
