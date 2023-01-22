@@ -2,11 +2,11 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 const connectDB = require('./DB/connection');
-const app = express();
+
 
 
 const port = process.env.PORT || 3000;
-
+const app = express();
 // app.use(express.json());
 /*
 app.use(express.json())
