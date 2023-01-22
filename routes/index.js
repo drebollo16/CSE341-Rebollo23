@@ -1,9 +1,9 @@
 const express = require('express');
-const router = express.Router();
+const routes = express.Router();
 const contactController = require('../controllers/contacts');
 
 
-router.get('/', (req, res) => {
+routes.get('/', (req, res) => {
     res.send('CSE 341 - Assignments');
 });
 
@@ -11,9 +11,9 @@ router.get('/', (req, res) => {
 
 //routes.get('/contacts');
 
-router.use('/contacts', require('./contacts'));
+routes.use('/contacts', require('./contacts'));
 
 //added to get contacts by ID
 //routes.get('/: id ', contactController.getOneId);
 
-module.exports = router;
+module.exports = routes;
