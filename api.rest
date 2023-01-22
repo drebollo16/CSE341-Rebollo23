@@ -4,7 +4,33 @@ GET http://localhost:3000/contacts
 ### 
 GET http://localhost:3000/contacts/63c1ef67cd316c26b6bcef0e
 
- 
+###  
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "Elena123",
+"lastName": "Rebollo", 
+"email": "kekorebollo@anything.com",
+"FavoriteColor": "pink",
+"Birthday": "12/09/2014"
+}
+
+### 
+PUT http://localhost:3000/contacts/63c1ef67cd316c26b6bcef0e HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Denise1",
+  "lastName": "Rebollo",
+  "Birthday": "03/25/1984",
+  "FavoriteColor": "Purple",
+  "email": "drebollo09@gmail.com"
+}
+
+###
+DELETE http://localhost:3000/contacts/63cc6177aabc90eb1b2a6b62 HTTP/1.1
+
 ###
 GET https://cserebollo.onrender.com/contacts
 

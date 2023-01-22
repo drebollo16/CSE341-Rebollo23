@@ -3,23 +3,26 @@ const Schema = mongoose.Schema;
 
 const user = new Schema({
     firstName: {
-        type: String,
-        required: true
+        type: String
+
     },
     lastName: {
         type: String,
-        required: true
+
+    },
+    Birthday: {
+        type: String
+    },
+    FavoriteColor: {
+        type: String
+    },
+    email: {
+        type: String
     }
+
 });
 
-/*
-const userId = new mongoose.Schema({
-    id: {
-        type: mongoose.Schema.Types.ObjectId
-    }
-});
 
-*/
 module.exports = User = mongoose.model('User', user);
 
 
