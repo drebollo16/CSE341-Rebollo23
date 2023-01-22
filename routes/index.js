@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const contactController = require('../controllers/contacts');
 
-/*
+
 routes.get('/', (req, res) => {
-    res.send('Denise rebollo');
-});*/
+    res.send('CSE 341 - Assignments');
+});
 
 
 
