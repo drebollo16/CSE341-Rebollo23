@@ -5,6 +5,7 @@ const connectDB = require('./DB/connection');
 const app = express();
 
 
+const port = process.env.PORT || 3000;
 
 // app.use(express.json());
 /*
@@ -22,12 +23,11 @@ app
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();
     })
-    //.use('/', require('./routes'));
+    .use('/', require('./routes'));
 
 
-const port = process.env.PORT || 3000;
 
-app.use('/', require('./routes'))
+//app.use('/', require('./routes'))
 connectDB();
 
 app.listen(port, () => {

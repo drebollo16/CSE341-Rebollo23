@@ -16,7 +16,6 @@ router.post('/', contactsRoute.createUser);
 router.put('/:id', contactsRoute.updateUser);
 
 //delete user
-
 router.delete('/:id', contactsRoute.DeleteUser);
 
 module.exports = router;
