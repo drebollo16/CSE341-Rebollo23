@@ -9,11 +9,11 @@ POST http://localhost:3000/contacts HTTP/1.1
 content-type: application/json
 
 {
-"firstName": "DENISEMARIE",
+"firstName": "ELENAMARIA",
 "lastName": "REBOLLO", 
-"email": "dmarier@anything.com",
-"FavoriteColor": "red",
-"Birthday": "03/25/1984"
+"email": "TESTING@anything.com",
+"FavoriteColor": "PURPLE",
+"Birthday": "12/09/2014"
 }
 
 ### 
