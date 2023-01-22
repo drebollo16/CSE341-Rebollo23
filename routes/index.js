@@ -3,7 +3,7 @@ const router = express.Router();
 const contactController = require('../controllers/contacts');
 
 
-routes.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('CSE 341 - Assignments');
 });
 
