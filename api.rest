@@ -9,11 +9,11 @@ POST http://localhost:3000/contacts HTTP/1.1
 content-type: application/json
 
 {
-"firstName": "Elena123",
-"lastName": "Rebollo", 
-"email": "kekorebollo@anything.com",
-"FavoriteColor": "pink",
-"Birthday": "12/09/2014"
+"firstName": "De",
+"lastName": "Marie", 
+"email": "dmarier@anything.com",
+"FavoriteColor": "red",
+"Birthday": "03/25/1984"
 }
 
 ### 
@@ -29,12 +29,42 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/contacts/63cc6177aabc90eb1b2a6b62 HTTP/1.1
+DELETE http://localhost:3000/contacts/63cc930509580583f916483b HTTP/1.1
 
-###
+
+
+//******************RENDER SITE **********************************************************************
+
+###   GET ALL CONTACTS
 GET https://cserebollo.onrender.com/contacts
 
-### 
+### GET ONE USER
 GET https://cserebollo.onrender.com/contacts/63c1eb80cd316c26b6bcef0d
 
- 
+### POST - CREATE USER
+POST https://cserebollo.onrender.com/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+"firstName": "De",
+"lastName": "Marie", 
+"email": "dmarier@anything.com",
+"FavoriteColor": "red",
+"Birthday": "03/25/1984"
+}
+
+### 
+PUT https://cserebollo.onrender.com/contacts/63c1eb80cd316c26b6bcef0d HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "JSNNN",
+  "lastName": "Rebollo",
+  "Birthday": "03/25/1984",
+  "FavoriteColor": "Purple",
+  "email": "drebollo09@gmail.com"
+}
+
+
+### DELETE ONE USER
+DELETE https://cserebollo.onrender.com/contacts/63cca948542db7bd2b0695eb

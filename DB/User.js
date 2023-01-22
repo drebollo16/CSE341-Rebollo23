@@ -18,8 +18,8 @@ const user = new Schema({
     },
     email: {
         type: String
-    }
-
+    },
+    versionKey: false
 });
 
 

@@ -26,9 +26,10 @@ const createUser = async(req, res) => {
         lastName: req.body.lastName,
         Birthday: req.body.Birthday,
         email: req.body.email,
-        FavoriteColor: req.body.FavoriteColor,
+        FavoriteColor: req.body.FavoriteColor
     });
-    const created = await modelUser.createCollection.newUser;
+    const created = await modelUser.createCollection(createUser, newUser);
+
     if (created) {
         res.status(201).json(created);
     } else {
@@ -47,11 +48,11 @@ const updateUser = async(req, res) => {
         lastName: req.body.lastName,
         Birthday: req.body.Birthday,
         email: req.body.email,
-        FavoriteColor: req.body.FavoriteColor,
+        FavoriteColor: req.body.FavoriteColor
     }
     const update = await modelUser.findByIdAndUpdate(UserId, infoUser);
 
-    if (update) {
+    if (update.acknowledged) {
         res.status(201).json(update);
     } else {
         res.status(500).json(update.error || 'error occured while updating the contact.');
@@ -70,12 +71,12 @@ const DeleteUser = async(req, res) => {
         lastName: req.body.lastName,
         Birthday: req.body.Birthday,
         email: req.body.email,
-        FavoriteColor: req.body.FavoriteColor,
+        FavoriteColor: req.body.FavoriteColor
     }
     const update = await modelUser.deleteOne(UserId, infoUser);
 
-    if (update) {
-        res.status(201).json(update);
+    if (update.acknowledged) {
+        res.status(201).json(update || 'deleted');
     } else {
         res.status(500).json(update.error || 'error happened while deleting user.');
     }
