@@ -2,7 +2,11 @@ const express = require('express');
 const routes = express.Router();
 const contactController = require('../controllers/contacts');
 
-
+/*
+constswaggerAutogen = require('swagger-autogen');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+*/
 routes.get('/', (req, res) => {
     res.send('CSE 341 - Assignments');
 });

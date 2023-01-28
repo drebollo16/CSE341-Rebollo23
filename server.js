@@ -1,12 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 
 const bodyParser = require('body-parser');
 const connectDB = require('./DB/connection');
 
-/*
+
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
+/*
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 */
@@ -23,9 +25,14 @@ app.use(express.json())
     });
     */
 //app.use('/API/userModel', require('./API/User'));
+
+
 connectDB();
 
 app
+//added swagger
+    .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+    .use(cors())
     .use(bodyParser.json())
     .use((req, res, next) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
