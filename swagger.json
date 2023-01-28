@@ -2,13 +2,13 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Description",
+    "description": "Contacts Description",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "/cserebollo.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
@@ -20,6 +20,13 @@
             "description": "OK"
           }
         }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
       }
     },
     "/contacts/": {
