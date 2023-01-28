@@ -3,11 +3,21 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
     info: {
         title: 'My API',
+        description: 'Contacts Description',
+    },
+    host: '/cserebollo.onrender.com',
+    schemes: ['https'],
+};
+/*
+const doc = {
+    info: {
+        title: 'My API',
         description: 'Description',
     },
     host: 'localhost:3000',
     schemes: ['http'],
-};
+};*/
+
 
 //const outputFile = './path/swagger-output.json';
 const outputFile = './swagger.json';
