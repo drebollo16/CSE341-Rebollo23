@@ -11,9 +11,9 @@ content-type: application/json
 {
 "firstName": "ELENAMARIA",
 "lastName": "REBOLLO", 
-"email": "TESTING@anything.com",
 "FavoriteColor": "PURPLE",
-"Birthday": "12/09/2014"
+"Birthday": "12/09/2014",
+"email": "TESTING@anything.com"
 }
 
 ### 
@@ -48,9 +48,9 @@ Content-Type: application/json
 {
 "firstName": "testing3",
 "lastName": "Rebollo", 
-"email": "sdsdbollo@anything.com",
 "FavoriteColor": "blue",
-"Birthday": "12/31/2000"
+"Birthday": "12/31/2000",
+"email": "sdsdbollo@anything.com"
 }
 
 ### 
