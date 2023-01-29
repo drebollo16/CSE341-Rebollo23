@@ -17,9 +17,9 @@ const createUser = async(req, res) => {
     const newUser = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
+        FavoriteColor: req.body.FavoriteColor,
         Birthday: req.body.Birthday,
-        email: req.body.email,
-        FavoriteColor: req.body.FavoriteColor
+        email: req.body.email
     };
     const created = await modelUser.collection.insertOne(newUser);
     if (created) {
@@ -31,9 +31,16 @@ const createUser = async(req, res) => {
 
 //update user info by _id to monogodb
 const updateUser = async(req, res) => {
+    const contactInfo = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        FavoriteColor: req.body.FavoriteColor,
+        Birthday: req.body.Birthday,
+        email: req.body.email
+    };
     const UserId = await modelUser.findById(req.params.id);
-    const update = await modelUser.findByIdAndUpdate(UserId, infoUser);
-
+    // const update = await modelUser.findByIdAndUpdate(UserId, infoUser);
+    const update = await modelUser.collection.replaceOne(UserId, contactInfo)
     if (update.acknowledged) {
         res.status(204).json(update);
     } else {
