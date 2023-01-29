@@ -23,7 +23,7 @@ const createUser = async(req, res) => {
     };
     const created = await modelUser.collection.insertOne(newUser);
     if (created) {
-        res.status(201).json(created);
+        res.status(201).json(created || 'Success');
     } else {
         res.status(500).json(created.error || 'error occurred while creating a new user');
     }
@@ -40,9 +40,9 @@ const updateUser = async(req, res) => {
     };
     const UserId = await modelUser.findById(req.params.id);
     // const update = await modelUser.findByIdAndUpdate(UserId, infoUser);
-    const update = await modelUser.collection.replaceOne(UserId, contactInfo)
+    const update = await modelUser.updateMany(UserId, contactInfo);
     if (update.acknowledged) {
-        res.status(204).json(update);
+        res.status(204).json(update || 'Updated');
     } else {
         res.status(500).json(update.error || 'error occured while updating the contact.');
     }
