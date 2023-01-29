@@ -54,13 +54,13 @@
                 "lastName": {
                   "example": "any"
                 },
+                "FavoriteColor": {
+                  "example": "any"
+                },
                 "Birthday": {
                   "example": "any"
                 },
                 "email": {
-                  "example": "any"
-                },
-                "FavoriteColor": {
                   "example": "any"
                 }
               }
@@ -102,6 +102,30 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "FavoriteColor": {
+                  "example": "any"
+                },
+                "Birthday": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
