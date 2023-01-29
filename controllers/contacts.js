@@ -42,7 +42,7 @@ const updateUser = async(req, res) => {
     // const update = await modelUser.findByIdAndUpdate(UserId, infoUser);
     const update = await modelUser.updateMany(UserId, contactInfo);
     if (update.acknowledged) {
-        res.status(204).json(update || 'Updated');
+        res.status(204).json(update || 'Updated.');
     } else {
         res.status(500).json(update.error || 'error occured while updating the contact.');
     }
